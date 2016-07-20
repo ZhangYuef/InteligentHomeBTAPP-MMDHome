@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+    }
+}
+
+ext {
+    compileSdkVersion = 21
+    buildToolsVersion = "21"
+    storeFilePath = System.getenv('STORE_FILE')
+    storePassword = System.getenv('STORE_PASSWORD')
+    keyAlias = System.getenv('KEY_ALIAS')
+    keyPassword = System.getenv('KEY_PASSWORD')
+}

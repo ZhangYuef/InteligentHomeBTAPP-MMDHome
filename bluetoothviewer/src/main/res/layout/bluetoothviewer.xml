@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/btstatus"
+        android:gravity="end"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btstatus_not_connected"
+        android:background="#40ffffff"
+        />
+    <TableLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content">
+    <TableRow>
+        <TextView
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:text="PM2.5浓度值："/>
+        <TextView
+            android:id="@+id/number_in"
+            android:layout_height="25dp"
+            android:layout_width="50dp"/>
+        <TextView
+            android:id="@+id/text1"
+            android:layout_height="25dp"
+            android:text="mg/m³"/>
+    </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:text="PM2.5报警值："/>
+            <TextView
+                android:id="@+id/set_in"
+                android:layout_height="25dp"
+                android:layout_width="50dp"
+                android:clickable="true"/>
+            <TextView
+                android:layout_height="25dp"
+                android:layout_width="110dp"
+                android:text="mg/m³"/>
+        </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:text="室内温度："/>
+    <TextView
+        android:id="@+id/temp_in"
+        android:layout_width="100dp"
+        android:layout_height="25dp"/>
+        <TextView
+            android:id="@+id/text2"
+            android:layout_height="25dp"
+            android:text="℃"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/text3"
+            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:text="模式设置："/>
+        <TextView
+            android:id="@+id/scheme_in"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:src="@drawable/ic_toll_black_24dp"
+            android:id="@+id/scheme_in_button"
+            android:layout_height="wrap_content"
+            android:background="#0000"/>
+    </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/text4"
+                android:layout_height="wrap_content"
+                android:text="声音设置："/>
+            <TextView
+                android:id="@+id/sound_in"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:src="@drawable/ic_toll_black_24dp"
+                android:id="@+id/sound_in_button"
+                android:layout_height="wrap_content"
+                android:background="#0000"/>
+        </TableRow>
+
+        <TableRow>
+            <SeekBar
+               android:id="@+id/seek_bar"
+                android:layout_span="3"
+                />
+        </TableRow>
+        <TableRow>
+        <TextView
+            android:id="@+id/text5"
+            android:layout_height="wrap_content"
+            android:text="语音识别："/>
+            <TextView
+                android:id="@+id/voice_in"
+                android:layout_height="wrap_content"/>
+            <ImageButton
+                android:src="@drawable/ic_toll_black_24dp"
+                android:id="@+id/voice_in_button"
+                android:layout_height="wrap_content"
+                android:background="#0000"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/table1">
+            <TextView
+                android:id="@+id/text6"
+                android:layout_height="wrap_content"
+                android:text="智能开关窗："/>
+            <Button
+                android:id="@+id/window_in_button1"
+                android:layout_height="40dp"
+                android:text="开"/>
+            <Button
+                android:id="@+id/window_in_button2"
+                android:layout_height="40dp"
+                android:layout_span="2"
+                android:text="关"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/table2">
+            <TextView
+                android:id="@+id/text7"
+                android:layout_height="wrap_content"
+                android:text="智能净化机："/>
+            <Button
+                android:id="@+id/air_in_button1"
+                android:layout_height="40dp"
+                android:text="开"/>
+            <Button
+                android:id="@+id/air_in_button2"
+                android:layout_height="40dp"
+                android:text="关"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_height="1dp"
+                android:id="@+id/create_database"
+                android:visibility="invisible"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/broadcast_button"
+                android:layout_height="wrap_content"
+                android:text="语音播报"
+                android:textColor="#F9F94B"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/voice_up"
+                android:layout_width="40dp"
+                android:text="音量加"/>
+            <Button
+                android:id="@+id/voice_down"
+                android:text="音量减"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/start_float_window"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textColor="#F9F94B"
+                android:text="悬浮窗"/>
+            <Button
+                android:id="@+id/send_notice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Send Notice"/>
+        </TableRow>
+    </TableLayout>
+    <ListView
+        android:id="@+id/in"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"/>
+
+    <LinearLayout
+        android:id="@+id/send_text_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_text_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:hint="请按位输入预警值"/>
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbarbg"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/toolbar_btn_connect"
+            style="@style/toolbarButton"
+            android:src="@drawable/toolbar_btn_connect"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/toolbar_btn_disconnect"
+            style="@style/toolbarButton"
+            android:src="@drawable/toolbar_btn_disconnect"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/toolbar_btn_pause"
+            style="@style/toolbarButton"
+            android:src="@drawable/toolbar_btn_pause"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/toolbar_btn_play"
+            style="@style/toolbarButton"
+            android:src="@drawable/toolbar_btn_play"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+</LinearLayout>
