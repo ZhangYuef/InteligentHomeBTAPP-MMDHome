@@ -27,3 +27,6 @@ Inteligent home APP, for PM2.5 detection and commutication with single chip micr
 ### 悬浮窗
 <image width='200px' src='https://raw.githubusercontent.com/ZhangYuef/Storage/Image/img/20200413001518.png'>
 
+## Reference
+- BlueTooth Android Example
+- 《第一行代码——Android》，作者：郭霖
